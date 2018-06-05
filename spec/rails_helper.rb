@@ -12,7 +12,7 @@ require 'support/controller_macros'
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
-    with.test_framework :respec
+    with.test_framework :
     with.library :rails
   end
 end

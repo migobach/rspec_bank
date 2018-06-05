@@ -1,7 +1,7 @@
 class BankAccount < ApplicationRecord
   belongs_to :user
   serialize :ledger, Array
-  validate :amount, :institution, :active, presence: true
+  validates :amount, :institution, :active, presence: true
   before_create :initialize_ledger
   before_update :update_ledger
 
@@ -17,3 +17,4 @@ class BankAccount < ApplicationRecord
       end
     end
 end
+ 
